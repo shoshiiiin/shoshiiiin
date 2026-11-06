@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 110" width="1280" height="110" role="img" aria-labelledby="t d">
+<title id="t">Divider: an eye opens</title>
+<desc id="d">A hairline across the page; in its middle an eye opens on Sasuke’s Mangekyō Sharingan, its pattern turns, and crows glide past.</desc>
+<style>
+.a{transform-box:fill-box;transform-origin:center}
+
+.open{transform-origin:50% 50%;animation:open 7s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes open{0%,8%{transform:scaleY(.04)}22%,78%{transform:scaleY(1)}92%,100%{transform:scaleY(.04)}}
+.spin{animation:spin 7s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes spin{0%,20%{transform:rotate(0)}50%{transform:rotate(240deg)}100%{transform:rotate(360deg)}}
+.out{animation:out 7s cubic-bezier(.3,0,.3,1) infinite}
+@keyframes out{0%,20%{stroke-dashoffset:0;opacity:0}24%{opacity:1}70%{stroke-dashoffset:-1000;opacity:1}76%,100%{stroke-dashoffset:-1000;opacity:0}}
+.glide{animation:glide 14s linear infinite}
+@keyframes glide{from{transform:translate(-60px,37px)}to{transform:translate(1340px,25px)}}
+.wing{transform-origin:50% 100%;animation:flapw .4s ease-in-out infinite alternate}
+.wb{animation-delay:-.2s}
+@keyframes flapw{to{transform:scaleY(-.65)}}
+
+.bolt{animation:bolt var(--t) linear var(--d) infinite}
+@keyframes bolt{0%{opacity:0}1.5%{opacity:1}5%{opacity:.3}8%{opacity:1}14%{opacity:.8}24%{opacity:.45}40%,100%{opacity:0}}
+
+.breath{animation:breath 1.2s ease-in-out infinite}
+@keyframes breath{50%{opacity:.5}}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs><linearGradient id="hair" x1="0" x2="1"><stop offset="0" stop-color="#3a2c6e" stop-opacity="0"/><stop offset=".5" stop-color="#3a2c6e"/><stop offset="1" stop-color="#3a2c6e" stop-opacity="0"/></linearGradient><clipPath id="lid"><path d="M-64 0Q0-34 64 0Q0 34-64 0Z"/></clipPath><radialGradient id="g-eye"><stop offset="0" stop-color="#e0182d" stop-opacity="0.5"/><stop offset=".35" stop-color="#e0182d" stop-opacity="0.15"/><stop offset="1" stop-color="#e0182d" stop-opacity="0"/></radialGradient>
+</defs>
+<path d="M0 55H1280" stroke="url(#hair)"/>
+<path d="M570 55H40" pathLength="1000" stroke="#ff5468" stroke-width="1.8" stroke-dasharray="40 960" class="out"/><path d="M710 55H1240" pathLength="1000" stroke="#ff5468" stroke-width="1.8" stroke-dasharray="40 960" class="out"/>
+<g transform="translate(640 55)">
+<ellipse rx="120" ry="50" fill="url(#g-eye)"/>
+<g class="a open"><path d="M-64 0Q0-34 64 0Q0 34-64 0Z" fill="#0b0712" stroke="#ff5468" stroke-width="1.2"/>
+<g clip-path="url(#lid)"><g class="spin"><defs><radialGradient id="ems-divider" gradientUnits="userSpaceOnUse" cx="0" cy="0" r="27"><stop offset=".14" stop-color="#240002"/><stop offset=".36" stop-color="#7c0009"/><stop offset=".62" stop-color="#c8000f"/><stop offset="1" stop-color="#a8000c"/></radialGradient></defs><circle r="27" fill="#050001"/><ellipse rx="25.11" ry="8.1" transform="rotate(90)" fill="url(#ems-divider)"/><ellipse rx="25.11" ry="8.1" transform="rotate(30)" fill="url(#ems-divider)"/><ellipse rx="25.11" ry="8.1" transform="rotate(150)" fill="url(#ems-divider)"/><ellipse rx="25.11" ry="8.1" transform="rotate(90)" fill="none" stroke="#050001" stroke-width="0.95"/><ellipse rx="25.11" ry="8.1" transform="rotate(30)" fill="none" stroke="#050001" stroke-width="0.95"/><ellipse rx="25.11" ry="8.1" transform="rotate(150)" fill="none" stroke="#050001" stroke-width="0.95"/><circle r="3.51" fill="#050001"/></g></g></g>
+</g>
+<g class="glide" transform="translate(330 33)"><g transform="scale(.55)"><path d="M-8-1C-10-9-7-18 2-25 1-16 2-8 3-1Z" fill="#000" opacity=".7" class="a wing wb"/><path d="M-15 0C-9-6 4-8 11-4L14-6 20-4 14-1C9 4-5 6-13 3L-24 6-21 1-25-1Z" fill="#000"/><path d="M-5-2C-4-12 3-22 16-28 12-19 10-10 7-1Z" fill="#000" class="a wing"/></g></g>
+<g class="glide" style="animation-delay:-6s;animation-duration:17s" transform="translate(930 27)"><g transform="scale(.38)"><path d="M-8-1C-10-9-7-18 2-25 1-16 2-8 3-1Z" fill="#000" opacity=".7" class="a wing wb"/><path d="M-15 0C-9-6 4-8 11-4L14-6 20-4 14-1C9 4-5 6-13 3L-24 6-21 1-25-1Z" fill="#000"/><path d="M-5-2C-4-12 3-22 16-28 12-19 10-10 7-1Z" fill="#000" class="a wing"/></g></g>
+</svg>

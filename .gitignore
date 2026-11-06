@@ -1,0 +1,7 @@
+# Original generated images stay local; the prepared WebP in src/art is committed.
+art/*.png
+.claude/
+.DS_Store
+# Caches: Python bytecode and the font subsets fetched by the build.
+__pycache__/
+src/fonts/
